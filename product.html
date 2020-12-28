@@ -228,8 +228,7 @@
               <h4 class="text-success my-0 py-0"><strong>BRAND</strong></h4>
               <p class="my-0 py-0">Product name can be long upto 15 words or even more</p>
               <h3><strong> Rs. 299</strong> <strike class="p small">Rs. 599</strike><span class="small ml-3 text-muted">50% off</span></h3>
-              
-              <br>
+              <p>Will be shipped in <strong>3</strong> Days</p>
             <p class="m-2"><strong>Size</strong></p>
             <div class="row p-0 m-0">
 
@@ -241,25 +240,74 @@
                 
                 
             </div>
+            <p class="m-2"><strong>Qty</strong></p>
+            <form action="" class="mx-2">
+              <input type="number" min="1" max="10">
+            </form>
             <p class="m-2"><strong>Product description</strong></p>
             <p class="m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa quibusdam nisi assumenda, doloremque necessitatibus dolorum dicta, adipisci sint inventore similique accusamus facilis accusantium deserunt voluptas nulla! In, sapiente, ipsa et, dicta eum beatae doloribus velit illo labore voluptatem quisquam quasi nam repudiandae explicabo ducimus quam cum at officia culpa?</p>
             <p class="m-2"><strong>Rating</strong></p>
             <h1 class="m-2">3.4 <span  class="fa fa-star text-warning"></span></h1>
             
             <p class="m-2"><strong>Rate this product</strong></p>
-            <div class="row p-0 m-0">
+            <style>
+              .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    width: 9em;
+}
 
-                <button type="submit" class="bg-light text-dark p-2 m-2 rounded border" ><strong>1</strong> </button>
-                <button class="bg-light text-dark p-2 m-2 rounded border"><strong>2</strong> </button>
-                <button class="bg-light text-dark p-2 m-2 rounded border"><strong>3</strong> </button>
-                <button class="bg-light text-dark p-2 m-2 rounded border"><strong>4</strong> </button>
-                <button class="bg-light text-dark p-2 m-2 rounded border" ><strong>5</strong> </button>
-                
-                
+.rating input {
+    position: absolute;
+    left: -999999px;
+}
 
-                
+.rating label {
+    display: inline-block;
+    font-size: 0;
+}
+
+.rating > label:before {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    font: 24px/1 FontAwesome;
+    display: block;
+    content: "\f005";
+    color: #ccc;
+    background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+    -webkit-text-fill-color: transparent;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > label.selected:before,
+.rating > label.selected ~ label:before {
+    color: #fb3;
+    background: #fb3;
+    -webkit-text-fill-color: transparent;
+}
+
+
+            </style>
+            <div class="rating mx-2">
+              <label>
+                <input type="radio" name="rating" value="5" title="5 stars"> 5
+              </label>
+              <label>
+                <input type="radio" name="rating" value="4" title="4 stars"> 4
+              </label>
+              <label>
+                <input type="radio" name="rating" value="3" title="3 stars"> 3
+              </label>
+              <label>
+                <input type="radio" name="rating" value="2" title="2 stars"> 2
+              </label>
+              <label>
+                <input type="radio" name="rating" value="1" title="1 star"> 1
+              </label>
             </div>
-            <br>
             <div class="row p-0">
                 <div class="col-6">
 
@@ -267,7 +315,7 @@
                 </div>
                 <div class="col-6">
 
-                    <button class="my-2 w-100 rounded ml-0 py-3 text-white m-1" style="border: none;background: red;">wishlist</button>
+                    <button class="my-2 w-100 rounded ml-0 py-3 text-white m-1" style="border: none;background: red;">closet</button>
                 </div>
 
                 
@@ -568,5 +616,11 @@
     <p class="mb-0 py-2">copyright @Buckler 2021</p>
   </div>
 </body>
-
+<script>
+  $('.rating input').change(function () {
+  var $radio = $(this);
+  $('.rating .selected').removeClass('selected');
+  $radio.closest('label').addClass('selected');
+});
+</script>
 </html>
