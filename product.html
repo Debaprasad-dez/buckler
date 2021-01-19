@@ -258,7 +258,7 @@
             </div>          </div>
           <div class="col-md-6">
               <br>
-              <h4 class="text-success my-0 py-0"><strong>BRAND</strong></h4>
+              <h4 class="text-success my-0 py-0 small"><strong>BRAND</strong></h4>
               <h4 class="my-0 py-0"><strong>Product name can be long upto 15 words or even more</strong></h4>
               <!--If buckler assured-->
               <img style="width: 150px;" src="https://previews.123rf.com/images/niserin/niserin1110/niserin111000128/10859155-barcelona-spain-at-summer-very-wide-high-quality-panorama.jpg" alt="">
@@ -270,8 +270,51 @@
               <a class="disabled text-dark h2 mr-2" style="font-family: Roboto;" href="">₹ 299</a>
               <a class="disabled text-muted h5 mr-2" style="font-family: Roboto;"  href=""><strike>₹ 599</strike></a>
               <a class="disabled text-success p" href="">50% off</a>
-              <p>Will be shipped in <strong>3</strong> Days</p>
-            <p class="m-1"><strong>Variant</strong></p>
+              <style>
+                
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  line-height: 3;
+  border-radius: 10px;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  cursor: pointer;
+}
+/* Arrow */
+
+/* Transition */
+
+
+              </style>
+              <p class="m-1"><strong>Size</strong></p>
+              <div class="select col-md-5" style="border: solid 1px #00661a;">
+                <select name="slct" id="slct">
+                  <option selected disabled>Choose an option</option>
+                  <option value="1">2GB / 16GB</option>
+                  <option value="2">4GB / 64GB</option>
+                  <option value="3">6GB / 64GB</option>
+                </select>
+              </div>
+            <p class="m-1"><strong>Color</strong></p>
             <!--variant form start-->
             <style>
                .choice-title label {
@@ -300,22 +343,24 @@
                          
                          <div class="choice-title">
                            <!--loop starts here-->
-                           <input type="radio" name="title" id="title-1"><label class="px-2 py-1" for="title-1">XS</label>
-                           <input type="radio" name="title" id="title-2"><label class="px-2 py-1" for="title-2">S</label>
-                           <input type="radio" name="title" id="title-3"><label class="px-2 py-1" for="title-3">M</label>
-                           <input type="radio" name="title" id="title-4"><label class="px-2 py-1" for="title-4">L</label>
-                           <input type="radio" name="title" id="title-5"><label class="px-2 py-1" for="title-5">XL</label>
+                           <input type="radio" name="title" id="title-1"><label class="px-2 py-1" for="title-1">Red</label>
+                           <input type="radio" name="title" id="title-2"><label class="px-2 py-1" for="title-2">Blue</label>
+                           <input type="radio" name="title" id="title-3"><label class="px-2 py-1" for="title-3">Grey</label>
+                           <input type="radio" name="title" id="title-4"><label class="px-2 py-1" for="title-4">Black</label>
+                           <input type="radio" name="title" id="title-5"><label class="px-2 py-1" for="title-5">Gold</label>
                            <!--loop ends here-->
                          </div>
                      </form>
                  </div>
-                 
+                 <p class="my-1"><strong>Selected</strong></p>
+                 <p>4GB / 64Gb , Black</p>
             <!--variant form end-->
             <p class="my-1"><strong>Quantity</strong></p>
             <form action="" class="">
               <input type="number" min="1" max="10" class="form-control w-25" >
             </form>
-            
+            <p class="my-1"><strong>Availability</strong></p>
+            <p class="text-success my-0 py-0">In stock</p>
             <div class="row p-0">
                 <div class="col-6">
 
@@ -323,7 +368,7 @@
                 </div>
                 <div class="col-6">
 
-                    <button class="my-2 w-100 rounded ml-0 py-3 text-white m-1" style="border: none;background: red;">closet <i class="far fa-heart text-white"></i></button>
+                    <button class="my-2 w-100 rounded ml-0 py-3 text-white m-1" style="border: none;background: red;">wishlist <i class="far fa-heart text-white"></i></button>
                 </div>
 
                 
@@ -344,7 +389,11 @@
                       <input type="radio" name="title" id="rating-3"><label class="px-2 py-1" for="rating-3">3</label>
                       <input type="radio" name="title" id="rating-4"><label class="px-2 py-1" for="rating-4">4</label>
                       <input type="radio" name="title" id="rating-5"><label class="px-2 py-1" for="rating-5">5</label>
+                      <button type="submit" class="btn py-2 bg-white text-white" style="background: #00661a !important;border-radius: 8px;box-shadow: none;">Submit</button>
+
                   </div>
+                  
+
               </form>
           </div>
         </div>
