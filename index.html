@@ -341,7 +341,7 @@
       <style>
         #demo strong{
           text-align: center;
-          font-size: 60px;
+          font-size: 48px;
           margin-top: 0px;
           font-weight: 700;
           font-style: italic;
@@ -351,7 +351,8 @@
         }
         #dealof {
           text-align: center;
-          font-size: 16px;
+          font-size: 8px;
+          font-style: italic;
           margin-top: 0px;
           border-radius: 15px;
           background: #000;
@@ -387,7 +388,7 @@
             
           // Output the result in an element with id="demo"
           document.getElementById("demo").innerHTML ="<strong>"+days + "</strong> <small classname={}>days</small> <strong>" + hours + "</strong> <small>hours</small> <strong>"
-          + minutes + "</strong> <small>minutes</small> <strong>" + seconds + "</strong> <small>seconds</small> left! Hurry";
+          + minutes + "</strong> <small>minutes</small> <strong>" + seconds + "</strong> <small>seconds</small> <br/> left! Hurry";
             
           // If the count down is over, write some text 
           if (distance < 0) {
