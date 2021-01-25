@@ -485,15 +485,31 @@
             position: absolute;
             left: 0;
             z-index: -10;
-            transform: translateY(18vh) scale(0.9);
+            transform: translateY(26vh) scale(0.9);
           }
           #spdeal {
             font-style: italic;
             font-size: 30px;
           }
-          @media only screen and (max-width: 767px) {
+          @media only screen and (max-width: 412px) {
             #redrect {
-              transform: translateY(12vh) scale(0.9);
+              transform: translateY(14vh) scale(0.9) !important;
+            }
+            #spdeal {
+              font-size: 12px;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            #redrect {
+              transform: translateY(15vh) scale(0.9);
+            }
+            #spdeal {
+              font-size: 12px;
+            }
+          }
+          @media only screen and (max-width: 1024px) {
+            #redrect {
+              transform: translateY(17vh) scale(0.9);
             }
             #spdeal {
               font-size: 12px;
@@ -504,7 +520,7 @@
         <div class="p-4">
           <div>
             <img
-              style="width: 90%"
+              style="width: 100%"
               class="mx-auto"
               src="images/poster2.jpeg"
               alt=""
@@ -513,10 +529,14 @@
           <br />
           <div class="row">
             <div class="col-6">
-              <img class="w-100 mx-auto" src="images/poster34.jpg" alt="" />
+              <a href="">
+                <img class="w-100 mx-auto" src="images/poster34.jpg" alt="" />
+              </a>
             </div>
             <div class="col-6">
-              <img class="w-100 mx-auto" src="images/poster34.jpg" alt="" />
+              <a href="">
+                <img class="w-100 mx-auto" src="images/poster34.jpg" alt="" />
+              </a>
             </div>
           </div>
           <div class="text-white mt-2">
