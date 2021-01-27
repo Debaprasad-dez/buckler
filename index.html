@@ -108,7 +108,7 @@
     }
     #madepack {
       position: absolute;
-      bottom: 10%;
+      bottom: 7.5%;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -539,6 +539,162 @@
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <div>
+        <div class="row">
+          <div
+            id="dod"
+            class="col-md-6 p-1 px-2 mx-auto bg-white shadow text-center"
+          >
+            <p class="my-3" style="font-style: italic">
+              <b><b>DEAL OF THE DAY</b></b>
+            </p>
+            <div class="row mx-2">
+              <div class="col-6">
+                <img class="w-100 p-2" src="images/poster34.jpg" alt="" />
+              </div>
+              <div class="col-6 text-left p-0">
+                <div class="p-2 m-0">
+                  <h4 class="p-0 m-0">
+                    <b><b>Product name</b></b>
+                  </h4>
+                  <h5 class="p-0 m-0 text-muted">Rs. 12,000</h5>
+                  <p class="text-danger">
+                    <b><strike>Rs. 12,000</strike></b>
+                  </p>
+                  <h4 style="font-style: italic">
+                    <strong class="text-muted"
+                      ><b class="text-dark">25% </b>off</strong
+                    >
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2" id="timer"></p>
+          </div>
+        </div>
+        <script>
+          // Set the date we're counting down to
+          var countDownDate = new Date("Jan 31,2021 00:00:00").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor(
+              (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="timer"
+            document.getElementById("timer").innerHTML =
+              "Time left : <b> " +
+              days +
+              " : " +
+              hours +
+              " : " +
+              minutes +
+              " : " +
+              seconds +
+              "</b>";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("timer").style.display = "none";
+              document.getElementById("dod").style.display = "none";
+            }
+          }, 0);
+        </script>
+      </div>
+      <br />
+      <div>
+        <div class="row">
+          <div
+            id="dod2"
+            class="col-md-6 p-1 px-2 mx-auto bg-white shadow text-center"
+          >
+            <p class="my-3" style="font-style: italic">
+              <b><b>DEAL OF THE MONTH</b></b>
+            </p>
+            <div class="row mx-2">
+              <div class="col-6">
+                <img class="w-100 p-2" src="images/poster34.jpg" alt="" />
+              </div>
+              <div class="col-6 text-left p-0">
+                <div class="p-2 m-0">
+                  <h4 class="p-0 m-0">
+                    <b><b>Product name</b></b>
+                  </h4>
+                  <h5 class="p-0 m-0 text-muted">Rs. 12,000</h5>
+                  <p class="text-danger">
+                    <b><strike>Rs. 12,000</strike></b>
+                  </p>
+                  <h4 style="font-style: italic">
+                    <strong class="text-muted"
+                      ><b class="text-dark">25% </b>off</strong
+                    >
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <p class="mt-2" id="timer2"></p>
+          </div>
+        </div>
+        <script>
+          // Set the date we're counting down to
+          var countDownDate = new Date("Jan 28,2021 00:00:00").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor(
+              (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="timer"
+            document.getElementById("timer2").innerHTML =
+              "Time left : <b> " +
+              days +
+              " : " +
+              hours +
+              " : " +
+              minutes +
+              " : " +
+              seconds +
+              "</b>";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("timer2").style.display = "none";
+              document.getElementById("dod2").style.display = "none";
+            }
+          }, 0);
+        </script>
+      </div>
+      <br />
       <div>
         <div class="text-left">
           <br />
