@@ -91,7 +91,7 @@
       z-index: 10000;
       background: rgb(252, 252, 252);
       width: 100%;
-      height: 100vh;
+      height: 100vh !important;
       animation: cssAnimation 0s ease-in 5s forwards;
     }
     @keyframes cssAnimation {
@@ -107,10 +107,7 @@
       }
     }
     #madepack {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      vertical-align: bottom;
     }
   </style>
   <body>
